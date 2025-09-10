@@ -24,5 +24,12 @@ A simple script for adding a "Like" button on HTMLy posts. It uses basic IP, ses
 
 *\*Placement and CSS can be edited to best fit your theme.*
 
+## Updating
+1) Overwrite the following files to your domain's root directory:
+  * like.js
+  * like_api.php
+  * likes_dashboard.php
+2) Navigate to: `/like_api.php?update=1`
+
 ## likes_dashboard.php
 This is a simple dashboard with a basic table of every post that's receieved at least one like and shows the count. It is only accessible by users who are logged in.

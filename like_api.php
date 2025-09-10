@@ -3,7 +3,20 @@
 
 session_start();
 
-$db = new SQLite3('likes.db');
+if($_GET['update']) {
+    $baseDir = __DIR__;
+    $contentDir = $baseDir . DIRECTORY_SEPARATOR . 'content';
+    $dbPathOld = $baseDir . DIRECTORY_SEPARATOR . 'likes.db';
+    $dbPathNew = $contentDir . DIRECTORY_SEPARATOR . 'likes.db';
+    if (file_exists($dbPathOld) && !file_exists($dbPathNew)) {
+        rename($dbPathOld, $dbPathNew);
+        echo "Database moved to content directory.";
+    } else {
+        echo "No update needed.";
+    }
+    exit;
+}
+$db = new SQLite3(__DIR__ . '/content/likes.db');
 $db->exec("CREATE TABLE IF NOT EXISTS likes (url TEXT PRIMARY KEY, count INTEGER DEFAULT 0)");
 $db->exec("CREATE TABLE IF NOT EXISTS like_users (
     url TEXT,

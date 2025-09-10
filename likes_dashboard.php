@@ -9,7 +9,7 @@ $full_domain = $protocol . '://' . $domain . '/';
 
 if (isset($_SESSION["$full_domain"]['user']) && !empty($_SESSION["$full_domain"]['user'])) {
     $user = $_SESSION["$full_domain"]['user'];
-    $db = new SQLite3(__DIR__ . '/likes.db');
+    $db = new SQLite3(__DIR__ . '/content/likes.db');
 
     // Pagination
     $page = isset($_GET['page']) ? max(1, intval($_GET['page'])) : 1;
