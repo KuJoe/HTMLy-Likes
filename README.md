@@ -1,5 +1,5 @@
 # HTMLy Likes
-A simple script for adding a "Like" button on HTMLy posts. It uses basic IP, sessions, and cookie tracking to ensure a user can only like a post once.
+A simple script for adding a "Like" button on [HTMLy](https://github.com/danpros/htmly) posts. It uses basic IP, sessions, and cookie tracking to ensure a user can only like a post once.
 
 ![An animated GIF showing a mouse cursor clicking on an empty star with a 0 next to it and the star gets filled in and the 0 turns into a 1.](https://a.cdn9000.com/IPtLWOJfYzoVbT4a/htmly_like.gif)
 
